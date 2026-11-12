@@ -7,6 +7,9 @@ import food from "@/assets/food.jpg";
 import drinks from "@/assets/drinks.jpg";
 import burger from "@/assets/burger.jpg";
 import dessert from "@/assets/dessert.jpg";
+import galleryPlatter from "@/assets/gallery-platter.jpg";
+import galleryMural from "@/assets/gallery-mural.webp";
+import galleryFridge from "@/assets/gallery-fridge.jpg";
 import logo from "@/assets/logo.png";
 
 const nav = [
@@ -201,26 +204,23 @@ function MenuSection() {
 
 function Gallery() {
   const imgs = [
-    { src: hero, alt: "Harmony Cafe interior", cls: "md:col-span-2 md:row-span-2" },
-    { src: drinks, alt: "Mojito and mango smoothie", cls: "" },
-    { src: food, alt: "Breakfast spread with croissants", cls: "" },
-    { src: burger, alt: "Harmony burger and pizza", cls: "md:col-span-2" },
-    { src: dessert, alt: "Desserts and macchiato", cls: "" },
-    { src: coffee, alt: "Coffee ceremony", cls: "" },
+    { src: galleryPlatter, alt: "Fresh Harmony platter with dips", cls: "col-span-2" },
+    { src: galleryMural, alt: "Our hand-painted Harmony wall", cls: "" },
+    { src: galleryFridge, alt: "Inside the Harmony kitchen", cls: "" },
   ];
   return (
     <section id="gallery" className="mx-auto max-w-7xl px-5 py-28 md:px-8">
       <SectionTitle eyebrow="Gallery" title={<>Moments at <em className="text-accent">Harmony</em></>} />
-      <div className="grid auto-rows-[220px] grid-cols-2 gap-4 md:auto-rows-[260px] md:grid-cols-4">
+      <div className="grid auto-rows-[220px] grid-cols-2 gap-4 md:auto-rows-[260px]">
         {imgs.map((g, i) => (
-          <figure key={i} className={`reveal group relative overflow-hidden rounded-3xl ${g.cls} ${i === 0 ? "col-span-2 row-span-2" : ""}`}>
+          <figure key={i} className={`reveal group relative overflow-hidden rounded-3xl ${g.cls}`}>
             <img src={g.src} alt={g.alt} loading="lazy" className="h-full w-full object-cover transition duration-[1.2s] group-hover:scale-110" />
             <figcaption className="absolute inset-x-0 bottom-0 translate-y-full bg-gradient-to-t from-espresso/90 to-transparent p-5 font-display text-xl text-cream transition duration-500 group-hover:translate-y-0">{g.alt}</figcaption>
           </figure>
         ))}
       </div>
       <div className="mt-10 text-center">
-        <a href={contact.instagram} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-accent"><Instagram className="h-4 w-4" /> Follow @harmonycafe</a>
+        <a href={contact.instagram} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-accent"><Instagram className="h-4 w-4" /> Follow @harmony_cafe_adama</a>
       </div>
     </section>
   );

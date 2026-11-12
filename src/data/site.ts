@@ -12,9 +12,9 @@ export const contact = {
   mapsUrl:
     "https://maps.google.com/maps?svid=CCYSESoPCg0vZy8xMWw3NXFiMDRsGAo&um=1&ie=UTF-8&fb=1&gl=et&sa=X&ftid=0x164b1f3a582ed057:0x1fe25f49369f4b29",
   mapsEmbed: "https://www.google.com/maps?q=Harmony+Cafe+Adama&output=embed",
-  instagram: "https://instagram.com/harmonycafe",
-  facebook: "https://facebook.com/harmonycafe",
-  tiktok: "https://tiktok.com/@harmonycafe",
+  instagram: "https://www.instagram.com/harmony_cafe_adama/",
+  facebook: "https://www.facebook.com/harmoney.cafe.adama/",
+  tiktok: "https://www.tiktok.com/@harmony_cafe",
 };
 
 export const whatsappLink = (text = "Hello Harmony Cafe! I'd like to make a reservation.") =>
